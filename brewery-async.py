@@ -49,7 +49,8 @@ def get_brewery_count(state: str) -> Dict:
             count += len(data)
             page += 1
     except Exception as e:
-    
+        print(f"Error for state={state}: {e}")
+        
     print(f"get_brewery_count, state={state}, exiting")
     return dict(state=state, brewery_count=count)
 
